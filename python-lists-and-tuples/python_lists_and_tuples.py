@@ -13,7 +13,7 @@ def lists(x):
   L2 = []
 
   for index in range(len(x)):
-    L2.append(index)
+    L2.append(index +1)
 
   return list(zip(L2, x))
 
