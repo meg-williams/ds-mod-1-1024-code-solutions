@@ -28,10 +28,7 @@ loans.tail(3)
 
 """### 5. Select 25% of the data, picked randomly and display the first 5 rows"""
 
-precent = (loans.Loan_ID.nunique())/4
-
-precent_of_loans = loans.sample(125, random_state=42)
-
+precent_of_loans = loans.sample(frac=0.25, random_state=42)
 precent_of_loans.head(5)
 
 """### 6. Sample 10 rows and display it"""
@@ -46,7 +43,7 @@ loans.City.value_counts()
 
 """### 8. Display only the 201st row"""
 
-loans.loc[201]
+loans.iloc[200]
 
 """### 9. Display only the `education` column"""
 
@@ -61,15 +58,15 @@ loans.loan_status
 ***(hint: remember that Python is 0-indexed!)***
 """
 
-loans.iloc[11]
+loans.iloc[8]
 
 """### 12. Display the 3rd through 7th rows by index slicing"""
 
-loans.iloc[4:9]
+loans.iloc[4:7]
 
 """### 13. Display the last 3 columns by index slicing"""
 
-loans.iloc[-3:]
+loans.iloc[:,-3:]
 
 """### 14. Display only the rows where `Gender` is `female`"""
 
